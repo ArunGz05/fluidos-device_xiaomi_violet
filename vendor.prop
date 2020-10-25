@@ -98,6 +98,9 @@ ro.vendor.display.sensortype=2
 # DRM
 drm.service.enabled=true
 
+# Enforce privapp-permissions whitelist
+ro.control_privapp_permissions=log
+
 # Factory Reset Protection
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
