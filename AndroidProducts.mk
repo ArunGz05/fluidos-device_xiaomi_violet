@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/cesium_violet.mk
+    $(LOCAL_DIR)/aosip_violet.mk
 
 COMMON_LUNCH_CHOICES := \
-    cesium_violet-userdebug \
-    cesium_violet-user \
-    cesium_violet-eng
+    aosip_violet-userdebug \
+    aosip_violet-user \
+    aosip_violet-eng

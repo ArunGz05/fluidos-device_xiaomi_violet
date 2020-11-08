@@ -9,11 +9,11 @@
 $(call inherit-product, device/xiaomi/violet/device.mk)
 
 # Inherit some common Extended stuff.
-$(call inherit-product, vendor/cesium/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := cesium_violet
+PRODUCT_NAME := aosip_violet
 PRODUCT_DEVICE := violet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7 Pro
@@ -27,5 +27,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# CesiumOS BETA Tag
+# aosipOS BETA Tag
 CUSTOM_BUILD_TYPE := BETA
