@@ -9,4 +9,4 @@ allow thermal-engine sysfs_devfreq:file rw_file_perms;
 # Rule for thermal-engine to access init process
 unix_socket_connect(thermal-engine, property, init);
 
-set_prop(thermal-engine, thermal_normal_prop)
+#set_prop(thermal-engine, thermal_normal_prop)

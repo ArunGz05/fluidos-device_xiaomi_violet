@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/corvus_violet.mk
+    $(LOCAL_DIR)/fluid_violet.mk

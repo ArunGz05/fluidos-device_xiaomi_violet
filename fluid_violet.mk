@@ -13,14 +13,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Inherit from violet device
 $(call inherit-product, device/xiaomi/violet/device.mk)
 
-# Inherit some common Corvus stuff.
+# Inherit some common fluid stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_WIFI_EXT := true
 IS_PHONE:= true
-$(call inherit-product, vendor/corvus/config/common_full_phone.mk)
+$(call inherit-product, vendor/fluid/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := corvus_violet
+PRODUCT_NAME := fluid_violet
 PRODUCT_DEVICE := violet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7 Pro
@@ -31,3 +31,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="violet"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+SKIP_ABI_CHECKS := true
