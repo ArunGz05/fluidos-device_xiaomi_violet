@@ -42,7 +42,7 @@ TARGET_NO_BOOTLOADER := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.console=ttyMSM0 service_locator.enable=1 swiotlb=1 earlycon=msm_geni_serial,0x880000 loop.max_part=7 cgroup.memory=nokmem,nosocket
-#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE +=  androidboot.vbmeta.avb_version=1.0
 BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -172,30 +172,31 @@ ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD := true
 
 # Sepolicy
-include device/qcom/sepolicy/SEPolicy.mk
+#include device/qcom/sepolicy/SEPolicy.mk
 
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-BOARD_SEPOLICY_M4DEFS += \
-    debugfs_clk=vendor_debugfs_clk \
-    debugfs_ipc=vendor_debugfs_ipc \
-    latency_device=vendor_latency_device \
-    nfc_vendor_data_file=vendor_nfc_vendor_data_file \
-    persist_audio_file=vendor_persist_audio_file \
-    persist_sensors_file=vendor_persist_sensors_file \
-    public_vendor_default_prop=vendor_public_vendor_default_prop \
-    sensors_prop=vendor_sensors_prop \
-    sysfs_boot_adsp=vendor_sysfs_boot_adsp \
-    sysfs_devfreq=vendor_sysfs_devfreq \
-    sysfs_fingerprint=vendor_sysfs_fingerprint \
-    sysfs_graphics=vendor_sysfs_graphics \
-    sysfs_kgsl=vendor_sysfs_kgsl \
-    sysfs_scsi_host=vendor_sysfs_scsi_host \
-    sysfs_ssr=vendor_sysfs_ssr \
-    wcnss_service_exec=vendor_wcnss_service_exec \
-    wifi_vendor_data_file=vendor_wifi_vendor_data_file \
-    thermal-engine=vendor_thermal-engine
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-minimal
+#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+#BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
+#BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+#BOARD_SEPOLICY_M4DEFS += \
+ #   debugfs_clk=vendor_debugfs_clk \
+  #  debugfs_ipc=vendor_debugfs_ipc \
+   # latency_device=vendor_latency_device \
+    #nfc_vendor_data_file=vendor_nfc_vendor_data_file \
+   # persist_audio_file=vendor_persist_audio_file \
+   # persist_sensors_file=vendor_persist_sensors_file \
+   # public_vendor_default_prop=vendor_public_vendor_default_prop \
+   # sensors_prop=vendor_sensors_prop \
+   # sysfs_boot_adsp=vendor_sysfs_boot_adsp \
+   # sysfs_devfreq=vendor_sysfs_devfreq \
+   # sysfs_fingerprint=vendor_sysfs_fingerprint \
+   # sysfs_graphics=vendor_sysfs_graphics \
+   # sysfs_kgsl=vendor_sysfs_kgsl \
+   # sysfs_scsi_host=vendor_sysfs_scsi_host \
+   # sysfs_ssr=vendor_sysfs_ssr \
+   # wcnss_service_exec=vendor_wcnss_service_exec \
+   # wifi_vendor_data_file=vendor_wifi_vendor_data_file \
+   # thermal-engine=vendor_thermal-engine
 
 SELINUX_IGNORE_NEVERALLOWS := true
 
