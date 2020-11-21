@@ -172,7 +172,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD := true
 
 # Sepolicy
-include device/qcom/sepolicy/sepolicy.mk
+include device/qcom/sepolicy/SEPolicy.mk
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
@@ -235,13 +235,3 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/violet/BoardConfigVendor.mk
-
-ALLOW_MISSING_DEPENDENCIES=true
-BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
-BUILD_BROKEN_DUP_RULES := true
-BUILD_BROKEN_PREBUILT_ELF_FILES := true
-BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
-TEMPORARY_DISABLE_PATH_RESTRICTIONS := true
-BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
-SKIP_ABI_CHECKS := true
-SKIP_API_CHECKS := true
