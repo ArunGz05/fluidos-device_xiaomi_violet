@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/fluid_violet.mk
+    $(LOCAL_DIR)/ssos_violet.mk
 
 COMMON_LUNCH_CHOICES := \
-    fluid_violet-userdebug \
-    fluid_violet-eng \
-    fluid_violet-user
+    ssos_violet-userdebug \
+    ssos_violet-eng \
+    ssos_violet-user
